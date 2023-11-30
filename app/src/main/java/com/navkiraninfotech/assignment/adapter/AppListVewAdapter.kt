@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import android.widget.CompoundButton
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.navkiraninfotech.assignment.R
 import com.navkiraninfotech.assignment.databinding.AppItemListViewBinding
 import com.navkiraninfotech.assignment.dataobjects.AppListResponse
 import com.navkiraninfotech.assignment.interfaces.onCheckClickListener
+import com.squareup.picasso.Picasso
 
 @SuppressLint("StaticFieldLeak")
 private lateinit var context: Context
@@ -44,7 +46,11 @@ class AppListVewAdapter(
         @SuppressLint("SetTextI18n")
         fun bindItems(item: AppListResponse.AppList, size: Int, position: Int) {
             binding.apply {
-                Glide.with(context).load(item.app_icon).into(imgApp);
+                Picasso.get()
+                    .load(item.app_icon)
+                    .placeholder(R.mipmap.img_placeholder)
+                    .error(R.mipmap.error)
+                    .into(imgApp);
                 tvAppName.text = item.app_name
                 when {
                     item.status.equals("Active",true) -> switchBtn.isChecked = true

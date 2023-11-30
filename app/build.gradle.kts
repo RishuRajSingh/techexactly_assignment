@@ -70,6 +70,9 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     // Shimmer
     implementation ("com.facebook.shimmer:shimmer:0.5.0")
+
+    //Picasso
+    implementation("com.squareup.picasso:picasso:2.8")
 }
 
 // Allow references to generated code
