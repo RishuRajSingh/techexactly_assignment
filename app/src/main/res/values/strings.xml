@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">App List</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="setting_fragment">Setting View</string>
+    <string name="name">Suvojit</string>
+    <string name="search">Search</string>
+</resources>
